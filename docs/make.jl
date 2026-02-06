@@ -9,7 +9,7 @@ makedocs(
     pages = ["Home" => "index.md"],
 )
 
-deploydocs(
-    repo = "github.com/angkunwu/HelloWorld",
-)
+# Deployment is handled by the GitHub Actions workflow which uploads
+# `docs/build` to GitHub Pages. Avoid calling `deploydocs` here so local
+# builds don't attempt to push.
 
