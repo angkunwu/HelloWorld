@@ -1,18 +1,18 @@
 name = "HelloWorld"
 uuid = "6cc86f1d-8cea-42ac-b2d7-65e941f3cad3"
-authors = ["angkunwu <gilbert.wu14@gmail.com> and contributors"]
+authors = ["angkunwu <gilbert.wu14@gmail.com>"]
 version = "1.0.0-DEV"
 
 [deps]
-Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
-PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
 
 [compat]
 julia = "1"
 
 [extras]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
 test = ["Test"]
+doc = ["Documenter"]

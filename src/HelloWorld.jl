@@ -1,9 +1,14 @@
 module HelloWorld
 
-using LinearAlgebra
-using PkgTemplates
-# Write your package code here.
+"""
+	HelloWorld
+
+A tiny example package for practicing Julia package structure and documentation.
+Exports `MyFunction`.
+"""
+
 export MyFunction
+
 include("HWfuncs.jl")
 
 end
