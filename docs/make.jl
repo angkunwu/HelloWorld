@@ -7,19 +7,10 @@ makedocs(
     sitename = "HelloWorld",
     modules  = [HelloWorld],
     pages = ["Home" => "index.md"],
+    output = joinpath("build", "dev"),
 )
 
-# Deployment is handled by the GitHub Actions workflow which uploads
-# `docs/build` to GitHub Pages. Avoid calling `deploydocs` here so local
-# builds don't attempt to push.
-if get(ENV, "GITHUB_ACTIONS", "") != ""
-    # When running in GitHub Actions, let Documenter handle deployment so
-    # it creates the versioned `dev/` folder for non-release builds.
-    deploydocs(
-        repo = "github.com/angkunwu/HelloWorld",
-        branch = "gh-pages",
-    )
-else
-    @info "Not running in GitHub Actions - skipping deploydocs() to avoid pushing from local builds"
-end
+# We publish the entire `docs/build` directory from CI (peaceiris/actions-gh-pages),
+# so write the dev build into `docs/build/dev` above. This creates a `/dev/` URL
+# on the published site (e.g. https://angkunwu.github.io/HelloWorld/dev/).
 
