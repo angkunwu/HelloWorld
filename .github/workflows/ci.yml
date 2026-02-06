@@ -36,10 +36,8 @@ jobs:
       - name: Build docs
         run: julia --project=docs -e 'using Pkg; Pkg.instantiate(); include("docs/make.jl")'
 
-      - name: Upload docs artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy to GitHub Pages (via gh-pages branch)
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./docs/build
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/build
