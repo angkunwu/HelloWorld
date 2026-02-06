@@ -1,0 +1,10 @@
+name = "HelloWorldDocs"
+uuid = "d8b9a0d2-4f84-4b6e-a5f0-123456789abc"
+authors = ["angkunwu <gilbert.wu14@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+
+[compat]
+julia = "1"
