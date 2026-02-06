@@ -7,7 +7,7 @@ makedocs(
     sitename = "HelloWorld",
     modules  = [HelloWorld],
     pages = ["Home" => "index.md"],
-    output = joinpath("build", "dev"),
+    build = joinpath("build", "dev"),
 )
 
 # We publish the entire `docs/build` directory from CI (peaceiris/actions-gh-pages),
